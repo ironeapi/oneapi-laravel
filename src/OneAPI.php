@@ -37,4 +37,10 @@ class OneAPI
         $key = config('OneAPI.metals');
         return $this->getOneAPI($key, "metals", $type);
     }
+
+    public function getCurrency($type)
+    {
+        $key = config('OneAPI.currency');
+        return $this->getOneAPI($key, "currency", $type);
+    }
 }
