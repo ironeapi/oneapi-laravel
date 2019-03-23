@@ -4,9 +4,8 @@ namespace OneAPI\Laravel;
 
 class OneAPI
 {
-    private function getOneAPI($service, $type)
+    private function getOneAPI($key, $service, $type)
     {
-        $key = config('OneAPI.api');
         $url = "https://oneapi.ir/api/$service/$type";
         $st = curl_init($url);
         curl_setopt($st, CURLOPT_RETURNTRANSFER, true);
@@ -35,6 +34,7 @@ class OneAPI
 
     public function getMetals($type)
     {
-        return $this->getOneAPI("metals", $type);
+        $key = config('OneAPI.metals');
+        return $this->getOneAPI($key, "metals", $type);
     }
 }
