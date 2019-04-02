@@ -32,15 +32,21 @@ class OneAPI
         }
     }
 
-    public function getMetals($type)
+    static function getMetals($type)
     {
         $key = config('OneAPI.metals');
-        return $this->getOneAPI($key, "metals", $type);
+        return OneAPI::getOneAPI($key, "metals", $type);
     }
 
-    public function getCurrency($type)
+    static function getCurrency($type)
     {
         $key = config('OneAPI.currency');
-        return $this->getOneAPI($key, "currency", $type);
+        return OneAPI::getOneAPI($key, "currency", $type);
+    }
+
+    static function getCrypto($type)
+    {
+        $key = config('OneAPI.crypto');
+        return OneAPI::getOneAPI($key, "crypto", $type);
     }
 }
