@@ -4,9 +4,13 @@ namespace OneAPI\Laravel;
 
 class OneAPI
 {
-    static function getOneAPI($key, $service, $type)
+    static function getOneAPI($key, $service, $type = null)
     {
-        $url = "https://oneapi.ir/api/$service/$type";
+        if ($type != NULL) {
+            $url = "https://oneapi.ir/api/$service/$type";
+        } else {
+            $url = "https://oneapi.ir/api/$service";
+        }
         $st = curl_init($url);
         curl_setopt($st, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($st, CURLOPT_HEADER, true);
@@ -24,29 +28,11 @@ class OneAPI
                 if (isset($code->status)) {
                     return $code->message;
                 } else {
-                    return $code;
+                    return $response;
                 }
             }
         } else {
             return "مقدارهای وارد شده اشتباه است.";
         }
-    }
-
-    static function getMetals($type)
-    {
-        $key = config('OneAPI.metals');
-        return OneAPI::getOneAPI($key, "metals", $type);
-    }
-
-    static function getCurrency($type)
-    {
-        $key = config('OneAPI.currency');
-        return OneAPI::getOneAPI($key, "currency", $type);
-    }
-
-    static function getCrypto($type)
-    {
-        $key = config('OneAPI.crypto');
-        return OneAPI::getOneAPI($key, "crypto", $type);
     }
 }
