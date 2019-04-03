@@ -1,7 +1,7 @@
 # OneAPI Laravel Package
 *OneAPI Package for using REST API from [OneAPI](https://oneapi.ir) for Laravel*
 
-*** Install ***
+***Install***
 -------------
 Run this command:
 
@@ -11,6 +11,6 @@ And run this command:
 
 ``php artisan vendor:publish --provider='OneAPI\Laravel\OneapiServiceProvider'``
 
-*** Usage ***
+***Usage***
 -------------
-You can set [OneAPI](https://oneapi.ir) api key on `config/OneAPI.php`.
+You can set [OneAPI](https://oneapi.ir) api key on `config/OneAPI.php`
