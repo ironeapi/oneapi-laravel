@@ -4,7 +4,7 @@ namespace OneAPI\Laravel;
 
 class OneAPI
 {
-    private function getOneAPI($key, $service, $type)
+    static function getOneAPI($key, $service, $type)
     {
         $url = "https://oneapi.ir/api/$service/$type";
         $st = curl_init($url);
@@ -21,7 +21,7 @@ class OneAPI
             $json = json_decode($response);
             for ($i=0;$i<count($json);$i++) {
                 $code = $json[$i];
-                if ($code->status) {
+                if (isset($code->status)) {
                     return $code->message;
                 } else {
                     return $code;
