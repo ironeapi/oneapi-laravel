@@ -1,5 +1,5 @@
 # OneAPI Laravel Package
-*OneAPI Package for using REST API from [OneAPI](https://oneapi.ir) for Laravel*
+*Package for using REST API from [OneAPI](https://oneapi.ir) for Laravel*
 
 ***Install***
 -------------
