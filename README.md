@@ -87,3 +87,23 @@ amd | Armenian Dram (AMD)
 gel | Georgian Lari (GEL)
 afn | Afghan Afghani (AFN)
 syp | Syrian pound (SYP)
+
+**OneAPI\Laravel\API\Crypto**
+
+Function | Service
+-------- | -------
+btc | Bitcoin
+eth | Ethereum
+xrp | XRP
+ltc | Lticoin
+eos | EOS
+bch | Bictoin Cash
+xlm | Stellar
+ada | Cardano
+trx | TRON
+bsv | Bitcoin SV
+xmr | Monero
+miota | IOTA
+dash | Dash
+ont | Ontology
+etc | Ethereum Classic
