@@ -15,13 +15,13 @@ class Crypto
     static function btc()
     {
         $key = config('OneAPI.crypto');
-        return OneAPI::getOneAPI($key, 'crypto', 'btc');
+        return OneAPI::getOneAPI($key, 'crypto', 'bitcoin');
     }
 
     static function eth()
     {
         $key = config('OneAPI.crypto');
-        return OneAPI::getOneAPI($key, 'crypto', 'eth');
+        return OneAPI::getOneAPI($key, 'crypto', 'ethereum');
     }
 
     static function xrp()
@@ -33,7 +33,7 @@ class Crypto
     static function ltc()
     {
         $key = config('OneAPI.crypto');
-        return OneAPI::getOneAPI($key, 'crypto', 'ltc');
+        return OneAPI::getOneAPI($key, 'crypto', 'litecoin');
     }
 
     static function eos()
@@ -45,7 +45,7 @@ class Crypto
     static function bch()
     {
         $key = config('OneAPI.crypto');
-        return OneAPI::getOneAPI($key, 'crypto', 'bch');
+        return OneAPI::getOneAPI($key, 'crypto', 'bitcoin-cash');
     }
 
     static function xlm()
@@ -99,6 +99,6 @@ class Crypto
     static function etc()
     {
         $key = config('OneAPI.crypto');
-        return OneAPI::getOneAPI($key, 'crypto', 'etc');
+        return OneAPI::getOneAPI($key, 'crypto', 'ethereum-classic');
     }
 }
